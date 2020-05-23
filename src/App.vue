@@ -6,8 +6,8 @@
         <SystemItem v-for="(item, index) of leftSystems" :key="index" :data="item" />
       </div>
       <div class="earth-box">
-        <div class="earth-bg">
-          <img src="./assets/earth.png" class="earth" alt="">
+        <div class="earth">
+          <div class="earth-bg" :style="{ backgroundPositionX: posX + 'px' }"></div>
         </div>
         <img src="./assets/earth-footer.png" class="earth-footer" alt="">
       </div>
@@ -30,6 +30,7 @@ export default {
   },
   data() {
     return {
+      posX: 0,
       leftSystems: [
         {
           name: '管网GIS系统',
@@ -58,6 +59,19 @@ export default {
           img: require('./assets/system6.png')
         }
       ]
+    }
+  },
+  created() {
+    this.init();
+  },
+  methods: {
+    init() {
+      let k = 0;
+      let _this = this;
+      setInterval(function() {
+        k--;
+        _this.posX = k;
+      }, 40);
     }
   }
 }
@@ -91,27 +105,22 @@ export default {
       display: inline-block;
       margin: 134px auto 0;
       overflow: hidden;
-      .earth-bg {
-        .earth {
+      .earth {
+        width: 600px;
+        height: 600px;
+        border-radius: 100%;
+        .earth-bg {
           width: 600px;
           height: 600px;
+          background: url('./assets/aa.jpg');
           border-radius: 100%;
-          animation: myfirst 120s linear infinite;
-          animation-play-state: running;
-        }
-        @keyframes myfirst {
-          0% {
-            transform: rotate(0deg);
-          } 
-          100% {
-            transform: rotate(360deg);
-          }
+          background-size: auto 100%;
         }
       }
       .earth-footer {
         width: 600px;
         height: 350px;
-        margin-top: -202px;
+        margin-top: -193px;
       }
     }
   }
