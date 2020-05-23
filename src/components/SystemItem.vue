@@ -46,13 +46,13 @@ export default {
     }
   }
   .system {
-    width:392px;
-    height: 257px;
+    width:360px;
+    height: 240px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -196px;
-    margin-top: -128.5px;
+    margin-left: -180px;
+    margin-top: -119px;
   }
   &:hover {
     transform: scale(1.1);
