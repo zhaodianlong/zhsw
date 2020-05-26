@@ -34,29 +34,35 @@ export default {
       leftSystems: [
         {
           name: '管网GIS系统',
-          img: require('./assets/system1.png')
+          img: require('./assets/system1.png'),
+          url: 'http://www.baidu.com'
         },
         {
           name: '智能巡检系统',
-          img: require('./assets/system2.png')
+          img: require('./assets/system2.png'),
+          url: 'http://www.baidu.com'
         },
         {
           name: '生产调度SCADA系统',
-          img: require('./assets/system3.png')
+          img: require('./assets/system3.png'),
+          url: 'http://www.baidu.com'
         }
       ],
       rightSystems: [
         {
           name: '营业收费系统',
-          img: require('./assets/system4.png')
+          img: require('./assets/system4.png'),
+          url: 'http://www.baidu.com'
         },
         {
           name: '安全生产系统',
-          img: require('./assets/system5.png')
+          img: require('./assets/system5.png'),
+          url: 'http://www.baidu.com'
         },
         {
           name: '办公自动化',
-          img: require('./assets/system6.png')
+          img: require('./assets/system6.png'),
+          url: 'http://www.baidu.com'
         }
       ]
     }
@@ -87,7 +93,6 @@ export default {
   min-width: 1920px;
   overflow: hidden;
   .content {
-    margin-top: 20px;
     text-align: center;
     .left {
       width: 392px;

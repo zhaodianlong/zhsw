@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" @click="toPage">
     <div class="title-box">
       <div class="title">{{ data.name }}</div>
     </div>
@@ -16,6 +16,15 @@ export default {
         return {};
       }
     }
+  },
+  methods: {
+    toPage() {
+      var a = document.createElement("a");
+      a.setAttribute("href", `${this.data.url}`);
+      a.setAttribute("target", "_blank");
+      a.click();
+      document.getElementsByTagName("body")[0].appendChild(a);
+    }
   }
 }
 </script>
@@ -27,7 +36,7 @@ export default {
   background: url('../assets/system-bg.png') no-repeat;
   background-size: 100% 100%;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   .title-box {
     width: 273px;
     height: 29px;
